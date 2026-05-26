@@ -1,12 +1,20 @@
-import './App.css';
-import Navbar from './Components/Navbar/Navbar';
-function App() {
-    return (
-        <div>
-            <Carousel />
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Navbar from './Components/Navbar/Navbar'
 
-        </div>
-    );
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
+  )
 }
 
-export default App;
+export default App
